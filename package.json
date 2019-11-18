@@ -1,0 +1,45 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "Front-end code for the Team 4 LambdaMUD Build Week project. ",
+  "main": "index.js",
+  "repository": "https://github.com/buildweekpt3-mud/Client.git",
+  "author": "Oliver Abreu and Joshua Gonzalez",
+  "license": "BSD-3-Clause AND MIT",
+  "dependencies": {
+    "@material-ui/core": "^4.4.3",
+    "@material-ui/icons": "^4.4.3",
+    "axios": "^0.18.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.1.2",
+    "react-spinners": "^0.6.1",
+    "react-vis": "^1.11.7",
+    "react-window": "^1.8.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "dotenv": "^7.0.0"
+  }
+}
