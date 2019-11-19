@@ -7,7 +7,7 @@ function Loading({ classes, loading }) {
   return (
     <div className={classes.container}>
       <Typography className={classes.title} variant="h2">
-        React Dungeon
+        Treasure Hunt
       </Typography>
       <div className={classes.loader}>
         <SkewLoader

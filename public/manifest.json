@@ -1,6 +1,6 @@
 {
-  "short_name": "React Dungeon",
-  "name": "React Dungeon",
+  "short_name": "Treasure Hunt",
+  "name": "Treasure Hunt",
   "icons": [{
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
