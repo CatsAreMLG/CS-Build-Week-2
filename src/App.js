@@ -16,11 +16,12 @@ class App extends Component {
     this.setState(prevState => ({ theme: !prevState.theme }))
   }
   componentDidMount() {
-    window.localStorage.setItem(
-      'Token',
-      '3020ec15cdc20994c7635062281a83bff692ffa5'
-    )
+    // window.localStorage.setItem(
+    //   'Token',
+    //   'ce1ca8779e7eeb0c4e7b61e752cbe6d90ccc3aee'
+    // )
     const token = window.localStorage.getItem('Token')
+		// const token =	'ce1ca8779e7eeb0c4e7b61e752cbe6d90ccc3aee'
     if (!window.localStorage.getItem('map')) {
       axios
         .get('https://lambda-treasure-hunt.herokuapp.com/api/adv/init', {
@@ -29,7 +30,9 @@ class App extends Component {
           }
         })
         .then(res => {
-          const room = res.data.room
+					// console.log(res.data)
+          const room = res.data
+					// console.log(room)
           window.localStorage.setItem(
             'map',
             JSON.stringify({
@@ -45,19 +48,19 @@ class App extends Component {
           )
         })
     }
-    this.setState({
-      theme: window.localStorage.getItem('theme') === 'true' ? 1 : 0
-    })
+    // this.setState({
+    //   theme: window.localStorage.getItem('theme') === 'true' ? 1 : 0
+    // })
   }
   render() {
     return (
-      <MuiThemeProvider theme={this.state.theme ? lightTheme : darkTheme}>
-        <Suspense fallback={loading => <Loading loading={loading} />}>
-          <Switch>
-            <Route exact path="/" component={Game} />
-          </Switch>
-        </Suspense>
-      </MuiThemeProvider>
+			<MuiThemeProvider theme={this.state.theme ? lightTheme : darkTheme}>
+				<Suspense fallback={loading => <Loading loading={loading} />}>
+					<Switch>
+						<Route exact path="/" component={Game} />
+					</Switch>
+				</Suspense>
+			</MuiThemeProvider>
     )
   }
 }

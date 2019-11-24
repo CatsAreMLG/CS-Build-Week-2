@@ -1,14 +1,14 @@
 const styles = ({ spacing }) => ({
   container: {
-    width: '100vw',
+    width: '100%',
     height: '100vh',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'spaceBetween',
     alignItems: 'center'
   },
   gameContainer: {
-    display: 'flex'
+    display: 'flex',
   },
   topBar: {
     display: 'flex',
@@ -33,7 +33,7 @@ const styles = ({ spacing }) => ({
     marginRight: spacing(2)
   },
   lists: {
-    width: 300,
+    width: 100,
     maxHeight: 100,
     overflow: 'auto',
     padding: 0,
@@ -58,7 +58,8 @@ const styles = ({ spacing }) => ({
   game: {
     position: 'relative',
     background: 'black',
-    width: 1000
+		// left: '-200px',
+    width: '700px', 
   },
   background: {
     width: '100%'
